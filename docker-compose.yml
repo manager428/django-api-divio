@@ -29,7 +29,7 @@ services:
     # See https://docs.divio.com/en/latest/reference/configuration-environment-variables.html.
     env_file: .env-local
 
-  # On the Cloud, your database runs on a dedicated cluster. Locally, we
+  # On the Cloud, your database runs on a dedicated cluster. Locally,
   # replicate it in a Docker container called "db".
   db:
     image: postgres:13.5-alpine
