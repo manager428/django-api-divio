@@ -4,19 +4,8 @@
 # this functionality by simply removing the wrapping tags.
 # </WARNING>
 
-# <DOCKER_FROM>
-FROM divio/base:1.2-py3.11-slim-bookworm
-# </DOCKER_FROM>
-
-# <NPM>
-# </NPM>
-
-# <BOWER>
-# </BOWER>
-
-# <PYTHON>
-ENV PIP_INDEX_URL=${PIP_INDEX_URL:-https://wheels.aldryn.net/v1/aldryn-extras+pypi/${WHEELS_PLATFORM:-aldryn-baseproject-py3}/+simple/} \
-    WHEELSPROXY_URL=${WHEELSPROXY_URL:-https://wheels.aldryn.net/v1/aldryn-extras+pypi/${WHEELS_PLATFORM:-aldryn-baseproject-py3}/}
+FROM python:3.11
+ENV PYTHONUNBUFFERED 1
 COPY requirements.* /app/
 
 RUN pip install -r requirements.txt
