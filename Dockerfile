@@ -25,7 +25,7 @@ RUN pip-reqs compile && \
         --no-index --no-deps \
         --requirement requirements.urls
 # </PYTHON>
-
+# test
 # <SOURCE>
 COPY . /app
 # </SOURCE>
